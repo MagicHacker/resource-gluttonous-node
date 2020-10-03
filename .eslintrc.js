@@ -3,6 +3,7 @@ module.exports = {
   plugins: ['@typescript-eslint'],
   extends: [
     'alloy',
+    'plugin:@typescript-eslint/recommended',
     'alloy/typescript',
   ],
 }
