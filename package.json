@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "nodemon app.ts",
     "dev": "nodemon src -e ts --exec ts-node src"
   },
   "repository": {
