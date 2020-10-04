@@ -3,10 +3,8 @@
   "extends": [
     "plugin:@typescript-eslint/recommended",
     "prettier/@typescript-eslint",
-    "alloy",
-    "alloy/typescript"
+    "plugin:prettier/recommended"
   ],
-  "plugins": ["prettier"],
   "parserOptions": {
     "sourceType": "module"
   },
