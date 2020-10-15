@@ -10,6 +10,4 @@ const config = {
   database: 'gluttonous'
 }
 
-export default {
-  config
-}
+export default config
