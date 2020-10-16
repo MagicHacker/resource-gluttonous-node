@@ -4,7 +4,7 @@
  */
 const config = {
   host: 'localhost',
-  user: 'root',
+  username: 'root',
   password: 'zhang2684323',
   port: '3306',
   database: 'gluttonous'
