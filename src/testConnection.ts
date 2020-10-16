@@ -9,7 +9,8 @@ const sequelize = new Sequelize(
   dbConfig.password,
   {
     host: dbConfig.host,
-    dialect: 'mysql'
+    dialect: 'mysql',
+    pool: dbConfig.pool
   }
 )
 

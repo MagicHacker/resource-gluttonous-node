@@ -7,7 +7,13 @@ const config = {
   username: 'root',
   password: 'zhang2684323',
   port: '3306',
-  database: 'gluttonous'
+  database: 'gluttonous',
+  pool: {
+    max: 5,
+    min: 0,
+    acquire: 3000, // 连接池尝试建立连接的最大时间 连接不上抛出错误
+    idle: 1000 //闲置的连接超时多少毫秒被释放
+  }
 }
 
 export default config
