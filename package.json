@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/app.ts",
+    "start": "nodemon src/server.ts",
     "dev": "nodemon src -e ts --exec ts-node src",
     "testConnection": "nodemon src/testConnection.ts"
   },
