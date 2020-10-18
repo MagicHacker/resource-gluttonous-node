@@ -7,6 +7,8 @@ import logger from 'morgan'
 import indexRouter from './routes/index'
 import usersRouter from './routes/users'
 import constant from './config/constant'
+import { testConnect } from './testConnection'
+import { db } from './model/index'
 const app = express()
 
 app.use(logger('dev'))
@@ -17,4 +19,12 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/', indexRouter)
 app.use('/users', usersRouter)
-app.listen(constant.port)
+// 测试数据库连接
+async function initServer(): Promise<any> {
+  await testConnect()
+  app.listen(constant.port, () => {
+    db.sequelize.sync()
+    console.log(`Express server started on port ${constant.port}`)
+  })
+}
+initServer()
