@@ -14,12 +14,12 @@ const sequelize = new Sequelize(
   }
 )
 
-async function testConnection() {
+export async function testConnect(): Promise<any> {
   try {
     await sequelize.authenticate()
     console.log('Connection has been established successfully.')
   } catch (error) {
     console.error('Unable to connect to the database:', error)
+    process.exit(1)
   }
 }
-testConnection()
